@@ -61,7 +61,10 @@ var restart = function() {
         worker.on("exit", (code, signal) => callback());
 
         // disconnect work once our replacement is listening
-        fork(() => worker.disconnect());
+        fork(() => {
+            worker.send("shutdown");
+            worker.disconnect();
+        });
     });
 };
 
