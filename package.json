@@ -1,6 +1,6 @@
 {
   "name": "nodowntime",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple module to gracefully restart worker processes one at a time to ensure no downtime.",
   "main": "nodowntime.js",
   "scripts": {
